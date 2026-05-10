@@ -122,23 +122,9 @@ class HomeScreen extends ConsumerWidget {
               onPressed: () => context.push("/search"),
               icon: const Icon(Icons.search_rounded, color: AppColors.onSurface),
             ),
-            Stack(
-              children: [
-                IconButton(
-                  onPressed: () => context.push("/notifications"),
-                  icon: const Icon(Icons.notifications_outlined, color: AppColors.onSurface),
-                ),
-                Positioned(
-                  right: 8, top: 8,
-                  child: Container(
-                    width: 8, height: 8,
-                    decoration: BoxDecoration(
-                      color: AppColors.tertiary, shape: BoxShape.circle,
-                      boxShadow: [BoxShadow(color: AppColors.tertiary.withValues(alpha: 0.5), blurRadius: 6)],
-                    ),
-                  ),
-                ),
-              ],
+            IconButton(
+              onPressed: () => context.push("/notifications"),
+              icon: const Icon(Icons.notifications_outlined, color: AppColors.onSurface),
             ),
           ],
         ),
@@ -222,10 +208,10 @@ class HomeScreen extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("You're most productive now",
+                    Text("Welcome to TaskFlow AI",
                         style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.onSurface)),
                     const SizedBox(height: 2),
-                    Text("3 high-priority tasks due today. Start with the urgent one.",
+                    Text("Add your first task to get started.",
                         style: GoogleFonts.inter(fontSize: 11, color: AppColors.onSurfaceVariant)),
                   ],
                 ),
@@ -254,14 +240,14 @@ class HomeScreen extends ConsumerWidget {
           children: [
             _StatCard(value: "${tasks.length}", label: "Tasks", icon: Icons.task_alt_outlined, color: AppColors.primary),
             const SizedBox(width: 8),
-            _StatCard(value: "4.2h", label: "Focus", icon: Icons.timer_outlined, color: AppColors.tertiary),
+            _StatCard(value: "0h", label: "Focus", icon: Icons.timer_outlined, color: AppColors.tertiary),
             const SizedBox(width: 8),
             _StatCard(
               value: "${total == 0 ? 0 : ((done / total) * 100).round()}%",
               label: "Score", icon: Icons.bolt_rounded, color: AppColors.secondary,
             ),
             const SizedBox(width: 8),
-            _StatCard(value: "5d", label: "Streak", icon: Icons.local_fire_department_rounded, color: AppColors.error),
+            _StatCard(value: "0d", label: "Streak", icon: Icons.local_fire_department_rounded, color: AppColors.error),
           ],
         ),
       ).animate().fadeIn(delay: 200.ms);

@@ -24,17 +24,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
   static const _filters = ["All Results", "Priority", "Date", "Type"];
 
-  static const _recentSearches = [
-    "quarterly earnings report",
-    "design system figma",
-    "api documentation",
-    "sprint planning",
-  ];
+  static const _recentSearches = <String>[];
 
-  static const _suggestions = [
-    _Suggestion(icon: Icons.auto_awesome_rounded, title: "Summarize Q4 Design Review", subtitle: "AI Workflow Suggestion", color: AppColors.primary),
-    _Suggestion(icon: Icons.bolt_rounded, title: "Urgent: Review Brand Assets", subtitle: "High Priority Task", color: AppColors.tertiary),
-  ];
+  static const _suggestions = <_Suggestion>[];
 
   @override
   void dispose() {

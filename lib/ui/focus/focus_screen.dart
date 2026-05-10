@@ -18,7 +18,7 @@ class _FocusScreenState extends State<FocusScreen> with SingleTickerProviderStat
   bool _running = false;
   bool _onBreak = false;
   int _secondsLeft = _workDuration;
-  int _sessionsCompleted = 3;
+  int _sessionsCompleted = 0;
   int _totalSessions = 4;
   String _ambientSound = "Deep Space";
   late AnimationController _timerAnim;
@@ -289,14 +289,14 @@ class _FocusScreenState extends State<FocusScreen> with SingleTickerProviderStat
                                   Text("Today's Total",
                                       style: GoogleFonts.inter(fontSize: 11, color: AppColors.onSurfaceVariant)),
                                   const SizedBox(height: 6),
-                                  Text("4h 12m Focused",
+                                  Text("0h 0m Focused",
                                       style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w500, color: AppColors.onSurface)),
                                   const SizedBox(height: 6),
                                   Row(children: [
-                                    const Icon(Icons.trending_up_rounded, size: 14, color: AppColors.success),
+                                    const Icon(Icons.timer_outlined, size: 14, color: AppColors.onSurfaceVariant),
                                     const SizedBox(width: 4),
-                                    Text("+18% vs yesterday",
-                                        style: GoogleFonts.inter(fontSize: 10, color: AppColors.success)),
+                                    Text("Start your first session",
+                                        style: GoogleFonts.inter(fontSize: 10, color: AppColors.onSurfaceVariant)),
                                   ]),
                                 ],
                               ),

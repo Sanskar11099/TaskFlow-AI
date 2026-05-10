@@ -25,7 +25,7 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
 
   final _messages = <_Message>[
     _Message(
-      text: "Hello! I've analyzed your task list and productivity patterns. You have 3 high-priority items due today. Shall I create an optimized schedule for you?",
+      text: "Hi! I'm your AI productivity assistant. Ask me anything — I can help you plan tasks, prioritize your work, or create a focus schedule.",
       isAi: true,
       time: "Just now",
     ),

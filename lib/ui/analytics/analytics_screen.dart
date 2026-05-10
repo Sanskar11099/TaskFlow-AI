@@ -87,8 +87,8 @@ class AnalyticsScreen extends ConsumerWidget {
                         lineBarsData: [
                           LineChartBarData(
                             spots: [
-                              const FlSpot(0, 3), const FlSpot(1, 5), const FlSpot(2, 4), const FlSpot(3, 7),
-                              const FlSpot(4, 6), const FlSpot(5, 8), FlSpot(6, done.toDouble().clamp(1, 10)),
+                              const FlSpot(0, 0), const FlSpot(1, 0), const FlSpot(2, 0), const FlSpot(3, 0),
+                              const FlSpot(4, 0), const FlSpot(5, 0), FlSpot(6, done.toDouble()),
                             ],
                             isCurved: true,
                             color: AppColors.primary,
@@ -130,7 +130,7 @@ class AnalyticsScreen extends ConsumerWidget {
                           Text("AI Insight", style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.primary)),
                         ]),
                         const SizedBox(height: 8),
-                        Text("Your peak productivity is 9AM — 4 tasks completed before noon.",
+                        Text("Complete tasks to unlock AI productivity insights.",
                             style: GoogleFonts.inter(fontSize: 11, color: AppColors.onSurface, height: 1.4)),
                         const SizedBox(height: 12),
                         Container(
@@ -167,16 +167,16 @@ class AnalyticsScreen extends ConsumerWidget {
                                 centerSpaceRadius: 32, sectionsSpace: 2,
                               )),
                               Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                Text("6.4h", style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: AppColors.onSurface)),
+                                Text("0h", style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: AppColors.onSurface)),
                                 Text("Avg Daily", style: GoogleFonts.inter(fontSize: 9, color: AppColors.onSurfaceVariant)),
                               ]),
                             ],
                           ),
                         ),
                         const SizedBox(height: 4),
-                        _Legend(color: AppColors.primary, label: "Deep Work 70%"),
-                        _Legend(color: AppColors.tertiary, label: "Meetings 20%"),
-                        _Legend(color: AppColors.outlineVariant, label: "Admin 10%"),
+                        _Legend(color: AppColors.primary, label: "Deep Work"),
+                        _Legend(color: AppColors.tertiary, label: "Meetings"),
+                        _Legend(color: AppColors.outlineVariant, label: "Admin"),
                       ],
                     ),
                   ),
