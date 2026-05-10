@@ -1,6 +1,6 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../data/models/quote_model.dart';
+import '../models/quote_model.dart';
 
 class QuoteService {
   static const _url = 'https://api.quotable.io/random';
