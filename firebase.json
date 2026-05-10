@@ -1,0 +1,24 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "taskflow-ai-gmas",
+          "appId": "1:190649857167:android:90c74e22008fc03fb96cfa",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "taskflow-ai-gmas",
+          "configurations": {
+            "android": "1:190649857167:android:90c74e22008fc03fb96cfa"
+          }
+        }
+      }
+    }
+  }
+}
