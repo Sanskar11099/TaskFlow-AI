@@ -15,6 +15,11 @@
 # Google Fonts - keep font-related classes
 -keep class com.google.android.gms.fonts.** { *; }
 
+# Play Core (required by Flutter's deferred components support)
+-dontwarn com.google.android.play.core.splitcompat.**
+-dontwarn com.google.android.play.core.splitinstall.**
+-dontwarn com.google.android.play.core.tasks.**
+
 # Prevent R8 from stripping interface information
 -keepattributes *Annotation*
 -keepattributes Signature
